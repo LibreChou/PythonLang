@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  pythoncli:
+    image: dl-cpu:tk
+    volumes:
+      - $PWD:/var/www/html
+    container_name: "dl-python"

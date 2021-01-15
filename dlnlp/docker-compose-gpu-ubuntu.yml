@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  pythoncli:
+    image: gpudeep:latest
+    volumes:
+      - $PWD:/var/www/html
+    container_name: "gpu-deeplearn"
