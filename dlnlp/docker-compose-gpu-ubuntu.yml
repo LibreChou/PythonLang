@@ -4,5 +4,5 @@ services:
   pythoncli:
     image: gpudeep:latest
     volumes:
-      - $PWD:/var/www/html
+      - /data:/data
     container_name: "gpu-deeplearn"
