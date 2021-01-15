@@ -60,7 +60,7 @@ def most_similar(query, word_to_id, id_to_word, word_matrix, top=5):
         similarity[i] = cos_similarity(word_matrix[i], query_vec)
 
     count = 0
-    for i in (-1 * similarity).argsort():
+    for i in (-1 * similarity).argsort():  # -1相乘后变成从大到小
         if id_to_word[i] == query:
             continue
         print(' %s: %s' % (id_to_word[i], similarity[i]))
