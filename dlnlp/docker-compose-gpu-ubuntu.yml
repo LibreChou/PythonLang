@@ -3,8 +3,7 @@ version: "3.7"
 services:
   pythoncli:
     image: gpudeep:latest
-    environment:
-      - NVIDIA_VISIBLE_DEVICES=all
+    runtime: nvidia
     volumes:
       - /data:/data
     container_name: "gpu-deeplearn"
