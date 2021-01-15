@@ -3,7 +3,6 @@ version: "3.7"
 services:
   pythoncli:
     image: gpudeep:latest
-    runtime:nvidia
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
