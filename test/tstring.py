@@ -1,4 +1,8 @@
 import unittest
+import sys
+
+print(sys.argv)
+
 import cupy as np
 np.cuda.set_allocator(np.cuda.MemoryPool().malloc)
 

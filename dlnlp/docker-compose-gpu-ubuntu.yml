@@ -3,7 +3,12 @@ version: "3.7"
 services:
   pythoncli:
     image: gpudeep:latest
+    ports:
+      - "63342:63342"
+      - "7000:7000"
     runtime: nvidia
     volumes:
-      - /data:/data
+      - /uwork:/uwork
+      - $PWD/conf/php/frp-start:/usr/local/bin/frp-start
     container_name: "gpu-deeplearn"
+    command: ['frp-start']
